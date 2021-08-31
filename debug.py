@@ -1,6 +1,5 @@
 import streamlit as st
 
-#raise Exception("Hello World")
-st.format("Hello")
-st.text("HELLO WORLD")
-
+menu_options = {}
+menu_options = {'Get Help': '', 'Report a bug': "https://google.com", 'About': "HELLOOOOO"}
+st.set_page_config(menu_options=menu_options)
