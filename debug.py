@@ -1,35 +1,23 @@
 import streamlit as st
-import time
 
-start_time = time.time()
+st.markdown(" ## Hamburger Menu Customization!")
 
-#@st.experimental_memo
-def method1():
-    y = 0
-    for x in range(1,1000000):
-        y += x
-    return y 
+st.write("Here is the new, original hamburger menu without customization in developer mode.")
+st.image("original.png")
+st.markdown("**As one can see, there is now a developer menu in grey in developer mode!**")
 
-menu_items = {'Get Help': "https://www.streamlit.io", "Report a bug": "https://www.google.com/help", "About" : "Hello. This App was built by William Huang. As a software Engineer, I have been working for a few years as a software engineer at different companies. One of the companies that I have worked at is Cisco. Another company that I have worked at is LogMeIn. These companies are different in size and in culture. Currently, I work at Streamlit and Streamlit is the best! Here, I am doing some testing for this Streamlit feature called Hamburger Menu. I hope it is working with the scrollability. *PLEASE* Hello. This App was built by William Huang. As a software Engineer, I have been working for a few years as a software engineer at different companies. One of the companies that I have worked at is Cisco. Another company that I have worked at is LogMeIn. These companies are different in size and in culture. Currently, I work at Streamlit and Streamlit is the best! Here, I am doing some testing for this Streamlit feature called Hamburger Menu. I hope it is working with the scrollability. PLEASE Hello. This App was built by William Huang. As a software Engineer, I have been working for a few years as a software engineer at different companies. One of the companies that I have worked at is Cisco. Another company that I have worked at is LogMeIn. These companies are different in size and in culture. Currently, I work at Streamlit and Streamlit is the best! Here, I am doing some testing for this Streamlit feature called Hamburger Menu. I hope it is working with the scrollability. PLEASE Hello. This App was built by William Huang. As a software Engineer, I have been working for a few years as a software engineer at different companies. One of the companies that I have worked at is Cisco. Another company that I have worked at is LogMeIn. These companies are different in size and in culture. Currently, I work at Streamlit and Streamlit is the best! Here, I am doing some testing for this Streamlit feature called Hamburger Menu. I hope it is working with the scrollability. PLEASE Hello. This App was built by William Huang. As a software Engineer, I have been working for a few years as a software engineer at different companies. One of the companies that I have worked at is Cisco. Another company that I have worked at is LogMeIn. These companies are different in size and in culture. Currently, I work at Streamlit and Streamlit is the best! Here, I am doing some testing for this Streamlit feature called Hamburger Menu. I hope it is working with the scrollability. PLEASE"}
-st.set_page_config(menu_items=menu_items)
-st.markdown(" # HELLO WORLD")
+st.write("Here is the new, original hamburger menu without customization as a viewer.")
+st.image("original_viewer.png")
 
-# Initialization
-if 'key' not in st.session_state:
-    st.session_state['key'] = method1()
+st.write(" If one wants to show information about their app, one can do that through this feature!")
+st.image("about.jpeg", "This is an example!")
 
-# Session State also supports attribute based syntax
-if 'key' not in st.session_state:
-    st.session_state.key = method1()
+st.code("""about_info = ''' ## My Custom App This app uses our ML model to demostrate churn prediction '''
+menu_items = {'About': about_info}
+st.set_page_config(menu_items=menu_items)""")
 
-# Reads
-st.write(st.session_state.key)
-
-# Outputs: value
-
-st.session_state.key = method1()    # Attribute API
-st.session_state['key'] = method1()  # Dictionary like API
-
-st.write(st.session_state)
-diff_time = time.time() - start_time
-st.write(f"--- {diff_time} seconds ---")
+st.write("If one wants to change the link, one can do that through the 'Get help' or 'Report a bug' key")
+st.code("""
+get_help_link = https://support.google.com/googlenest/troubleshooter/7211062?hl=en
+menu_items = {'Get help': get_help_link}
+st.set_page_config(menu_items=menu_items) """)
