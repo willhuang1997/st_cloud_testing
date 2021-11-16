@@ -5,7 +5,7 @@ st.info(user_input)
 
 #st.markdown(" ## Hamburger Menu Customization!")
 
-s#t.write("Here is the new, original hamburger menu without customization in developer mode.")
+#st.write("Here is the new, original hamburger menu without customization in developer mode.")
 #st.image("original.png")
 #st.markdown("**As one can see, there is now a developer menu in grey in developer mode!**")
 
