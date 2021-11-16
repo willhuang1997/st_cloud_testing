@@ -1,5 +1,8 @@
 import streamlit as st
 
+user_input = st.text_input("Enter Movie Name")
+st.info(user_input)
+
 st.markdown(" ## Hamburger Menu Customization!")
 
 st.write("Here is the new, original hamburger menu without customization in developer mode.")
