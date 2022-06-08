@@ -8,7 +8,7 @@ import json
 
 #SIMPLE FIG
 simple_fig = plt.figure(figsize=(3.5,3.5))
-plt.plot([1, 2, 3, 4])
+plt.plot([1, 2, 3, 4], marker="X")
 
 #FORMAT STRING FIG
 format_string_fig = plt.figure(figsize=(3.5,3.5))
@@ -20,7 +20,7 @@ np.random.seed(19680801)
 
 dollar_ticks_fig, ax = plt.subplots()
 dollar_ticks_fig.set_size_inches((3.5,3.5))
-ax.plot(100*np.random.rand(20))
+plt.plot(100*np.random.rand(20), marker='o')
 
 # Use automatic StrMethodFormatter
 ax.yaxis.set_major_formatter('${x:1.2f}')
@@ -53,10 +53,10 @@ t2 = np.arange(0.0, 5.0, 0.02)
 two_subplot_fig = plt.figure(figsize=(3.5,3.5))
 plt.subplot(211)
 plt.plot(t1, f(t1), color='tab:blue', marker='o')
-plt.plot(t2, f(t2), color='black')
+plt.plot(t2, f(t2), color='black', marker='8')
 
 plt.subplot(212)
-plt.plot(t2, np.cos(2*np.pi*t2), color='tab:orange', linestyle='--')
+plt.plot(t2, np.cos(2*np.pi*t2), color='tab:orange', linestyle='--', marker='.')
 plt.show()
 
 #TEXT BOXES FIG
@@ -95,7 +95,7 @@ date_format_fig, axs = plt.subplots(3, 1, figsize=(6.4, 7), constrained_layout=T
 date_format_fig.set_size_inches((5,5))
 # common to all three:
 for ax in axs:
-    ax.plot('date', 'adj_close', data=data)
+    ax.plot('date', 'adj_close', data=data, marker='.')
     # Major ticks every half year, minor ticks every month,
     ax.xaxis.set_major_locator(mdates.MonthLocator(bymonth=(1, 7)))
     ax.xaxis.set_minor_locator(mdates.MonthLocator())
