@@ -3,38 +3,43 @@ import pandas as pd
 import numpy as np
 import altair as alt
 
-st.markdown("""
-    Here are all the options that we can support for vega embed: \n
-        bind?: HTMLElement | string;
-        actions?: boolean | Actions;
-        mode?: Mode;
-        theme?: 'excel' | 'ggplot2' | 'quartz' | 'vox' | 'dark';
-        defaultStyle?: boolean | string;
-        logLevel?: number;
-        loader?: Loader | LoaderOptions;
-        renderer?: R;
-        tooltip?: TooltipHandler | TooltipOptions | boolean;
-        patch?: S | PatchFunc | Operation[];
-        width?: number;
-        height?: number;
-        padding?: number | {left?: number; right?: number; top?: number; bottom?: number};
-        scaleFactor?: number;
-        config?: S | Config;
-        sourceHeader?: string;
-        sourceFooter?: string;
-        editorUrl?: string;
-        hover?: boolean | Hover;
-        i18n?: Partial<typeof I18N>;
-        downloadFileName?: string;
-        formatLocale?: Record<string, unknown>;
-        timeFormatLocale?: Record<string, unknown>;
-        expressionFunctions?: ExpressionFunction;
-        ast?: boolean;
-        expr?: typeof expressionInterpreter;
-        viewClass?: typeof View;
-""")
+with st.expander("Here are all the options that we can support for vega embed"):
+    st.markdown("""   
+    \n
+    \n
+    ```
+bind?: HTMLElement | string;
+actions?: boolean | Actions;
+mode?: Mode;
+theme?: 'excel' | 'ggplot2' | 'quartz' | 'vox' | 'dark';
+defaultStyle?: boolean | string;
+logLevel?: number;
+loader?: Loader | LoaderOptions;
+renderer?: R;
+tooltip?: TooltipHandler | TooltipOptions | boolean;
+patch?: S | PatchFunc | Operation[];
+width?: number;
+height?: number;
+padding?: number | {left?: number; right?: number; top?: number; bottom?: number};
+scaleFactor?: number;
+config?: S | Config;
+sourceHeader?: string;
+sourceFooter?: string;
+editorUrl?: string;
+hover?: boolean | Hover;
+i18n?: Partial<typeof I18N>;
+downloadFileName?: string;
+formatLocale?: Record<string, unknown>;
+timeFormatLocale?: Record<string, unknown>;
+expressionFunctions?: ExpressionFunction;
+ast?: boolean;
+expr?: typeof expressionInterpreter;
+viewClass?: typeof View;
+```
+    """)
 
-st.write("""Here are the ones I suggest we support and we can support others later easily if need be:
+with st.expander("Here are the ones I suggest we support and we can support others later easily if need be"):
+    st.write("""
 ```
 actions?: boolean | Actions;
 i18n?: Partial<typeof I18N>; // I18N is the text that shows up in the actions dropdown
@@ -142,6 +147,5 @@ chart1 = alt.Chart(df).mark_bar().encode(
 st.altair_chart(chart1,formatLocale=de_format, timeFormatLocale=de_time_format)
 # st.altair_chart(c, theme='streamlit', scaleFactor=100)
 # st.altair_chart(c, theme='streamlit', scaleFactor=100)
-
 
 
