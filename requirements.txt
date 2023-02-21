@@ -6,3 +6,5 @@ plotly-express
 statsmodels
 matplotlib
 graphviz
+pydeck
+bokeh
