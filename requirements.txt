@@ -5,3 +5,4 @@ pandas
 plotly-express
 statsmodels
 matplotlib
+graphviz
